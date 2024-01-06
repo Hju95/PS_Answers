@@ -20,12 +20,14 @@ class Solution {
     public int solution(String word) {
         recursion("", 0);
         int answer = 0;
-        for (int i = 0; i < dictionary.size(); i++) {
-            if (dictionary.get(i).equals(word)) {
-                answer = i + 1;
-                break;
-            }
-        }
+        // for (int i = 0; i < dictionary.size(); i++) {
+        //     if (dictionary.get(i).equals(word)) {
+        //         answer = i + 1;
+        //         break;
+        //     }
+        // }
+        
+        answer = dictionary.indexOf(word) + 1;
         return answer;
     }
 }
