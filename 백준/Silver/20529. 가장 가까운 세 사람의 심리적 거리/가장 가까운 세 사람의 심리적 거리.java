@@ -12,14 +12,14 @@ public class Main {
             // input
             final int N = Integer.parseInt(bfr.readLine());
             StringTokenizer st = new StringTokenizer(bfr.readLine());
-            int gugu = N > 32 ? 33 : N;
-            String[] person = new String[gugu];
-            for (int i = 0; i < gugu; ++i) person[i] = st.nextToken();
+            int people = N > 32 ? 33 : N;
+            String[] person = new String[people];
+            for (int i = 0; i < people; ++i) person[i] = st.nextToken();
             // solution
-            int minDistance = 12;
-outerLoop : for (int i = 0; i < gugu; ++i) {
-                for (int j = i + 1; j < gugu; ++j) {
-                    for (int k = j + 1; k < gugu; ++k) {
+            int minDistance = 999;
+            outerLoop : for (int i = 0; i < people; ++i) {
+                for (int j = i + 1; j < people; ++j) {
+                    for (int k = j + 1; k < people; ++k) {
                         minDistance = Math.min(minDistance, calcDistance(person[i], person[j], person[k]));
                         if (minDistance == 0) {
                             // pass
